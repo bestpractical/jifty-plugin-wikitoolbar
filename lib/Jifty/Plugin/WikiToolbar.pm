@@ -4,6 +4,12 @@ use warnings;
 package Jifty::Plugin::WikiToolbar;
 use base qw/Jifty::Plugin/;
 
+our $VERSION = '0.01';
+
+=head1 NAME
+
+Jifty::Plugin::WikiToolbar - Jifty plugin to add a wiki toolbar to your textarea box
+
 =head1 SYNOPSIS
 
 In etc/config.yml
@@ -25,6 +31,12 @@ To custom the toolbar, copy wikitoolbar.js in your application, at the end of th
 
 Add a toolbar to your textarea field. Default toolbar provide markdown markup syntax. http://daringfireball.net/projects/markdown/
 
+=head1 METHOD
+
+=head2 init
+
+load wikitoolbar.js on startup
+
 =cut
 
 sub init {
@@ -34,5 +46,17 @@ sub init {
     "wikitoolbar.js",
     ]);
 }
+
+=head1 AUTHOR
+
+Yves Agostini, <yvesago@cpan.org>
+
+=head1 LICENSE
+
+Copyright 2007-2008 Yves Agostini. All Rights Reserved.
+
+This program is free software and may be modified and distributed under the same terms as Perl itself.
+
+=cut
 
 1;

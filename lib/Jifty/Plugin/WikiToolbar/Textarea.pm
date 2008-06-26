@@ -1,7 +1,23 @@
 package Jifty::Plugin::WikiToolbar::Textarea;
 use base qw(Jifty::Web::Form::Field::Textarea);
 
+=head1 NAME
+
+Jifty::Plugin::WikiToolbar::Textarea - Textarea widget with a wiki toolbar
+
+=head2 rows
+
+default to 30
+
+=cut
+
 sub rows { 30 };
+
+=head2 render_widget
+
+html widget
+
+=cut
 
 sub render_widget {
     my $self  = shift;
