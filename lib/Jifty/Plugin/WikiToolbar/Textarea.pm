@@ -5,13 +5,15 @@ use base qw(Jifty::Web::Form::Field::Textarea);
 
 Jifty::Plugin::WikiToolbar::Textarea - Textarea widget with a wiki toolbar
 
-=head2 rows
+=head2 accessors
 
-default to 30
-
+allow to override rows and cols size
+ 
 =cut
 
-sub rows { 30 };
+__PACKAGE__->mk_accessors(qw(rows cols));
+
+sub accessors { shift->SUPER::accessors(), 'rows', 'cols' }
 
 =head2 render_widget
 
